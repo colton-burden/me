@@ -1,0 +1,93 @@
+:root {
+    --bg: #3b3d6e;
+    --accent: #96fe77;
+    --text: #fdfef8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    svg {
+        transition: none;
+    }
+    a:hover svg,
+    a:focus-visible svg {
+        transform: none;
+    }
+}
+
+body {
+    background: var(--bg);
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+img {
+    max-width: 60%;
+    max-height: 60vh;
+    height: auto;
+    object-fit: contain;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+aside::before,
+aside::after {
+    content: '';
+    flex: 1;
+    width: 0.18rem;
+    min-height: 2rem;
+    border-radius: 2px;
+}
+
+aside::before {
+    background: linear-gradient(var(--bg), var(--text));
+}
+
+aside::after {
+    background: linear-gradient(var(--text), var(--bg));
+}
+
+a {
+    margin: 0.75rem 0;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+a:hover svg,
+a:focus-visible svg {
+    stroke: var(--accent);
+    transform: translateY(-4px);
+}
+
+svg {
+    stroke: var(--text);
+    fill: none;
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.2s, transform 0.2s;
+}
+
