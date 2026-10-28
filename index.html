@@ -2,14 +2,6 @@
 <html lang="en">
 
     <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JDQTG0HT0C"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JDQTG0HT0C');
-        </script>
-        
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="noindex, nofollow" />
@@ -18,8 +10,39 @@
         <title>Colton Burden</title>
         <link rel="canonical" href="https://coltonburden.com" />
         <link rel="icon" type="image/png" href="assets/apple-cat-spinning.gif" />
-        <link rel="stylesheet" href="index.css" />
     </head>
+
+    <style>
+        :root {
+            --bg: #3b3d6e;
+            --accent: #96fe77;
+            --text: #fdfef8;
+        }
+
+        body {
+            background: var(--bg);
+            display: flex;
+            min-height: 100vh;
+            max-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        img {
+            max-width: 60vw;
+            max-height: 60vh;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
 
     <body>
         <main>
